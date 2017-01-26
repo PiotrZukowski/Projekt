@@ -1,0 +1,11 @@
+#container {background-color: lightgray; width: 1000px; margin-left:auto; margin-right: auto}
+
+#naglowek {text-align: center; width: 100%; padding-bottom: 5px;}
+
+#nawigacja {float: left; width: 15%; min-height: 450px;}
+
+#glowny {float: left; width: 70%; min-height: 450px; background-color: #EEEEEE; text-align: center;}
+
+#boczny {float: left; width:15%; min-height: 450px;}
+
+#stopka {clear: both; width: 100%; text-align: center;}

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<title>Projekt 1B</title>
-<meta charset="utf-08" />
+<title>STRONA z elementami HTML5</title>
+<meta charset="utf-8" />
 <link rel="stylesheet" href="styl.css" />
 <script src ="plik.js"></script>
 </head>

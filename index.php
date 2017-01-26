@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="styl.css" />
 <script src ="plik.js"></script>
 </head>
-<body>
+<body onload="wczytajZdjecie();">
 <section id="kontener">
 <header id="naglowek"><div id="head1"><h5>Projekt</h5>
 Przydatne walidatory: <a href="http://html5.validator.nu">http://html5.validator.nu</a>&nbsp;&nbsp;&nbsp;&nbsp;

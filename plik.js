@@ -1,6 +1,15 @@
+var nrZdjecia = 1;
+
+
 function wczytajZdjecie()
 {
-	var tagImg = "<img id='slajd' src='obrazek.jpg' />";
-	document.getElementById("head2").innerHTML = tagImg;
+
+	if (nrZdjecia>3)nrZdjecia=1;
 	
+	
+
+	var tagImg = "<img id='slajd' src='obrazek"+nrZdjecia+".jpg' />";
+	document.getElementById("head2").innerHTML = tagImg;	
+	nrZdjecia++;
+	setTimeout("wczytajZdjecie()", 3000);
 }

@@ -19,15 +19,16 @@ Przydatne walidatory: <a href="http://html5.validator.nu">http://html5.validator
 </header>
 <nav id="menu">
 <a href="index.php?strona=start">Strona główna</a><br /><br />
-<a href="index.php?strona=gra">Gry</a>
+<a href="index.php?strona=gra">Gry</a> <br /><br />
+<a href="index.php?strona=losowanie">Losuj cwela</a>
 </nav>
 <section id="main">
 <?php
 if(isset($_REQUEST["strona"]))$strona = $_REQUEST["strona"];
 else $strona = "start";
-if(file_exists("skrypty/$strona.php"))
+if(file_exists("$strona.php"))
 {
-include("skrypty/$strona.php");
+include("$strona.php");
 }
 else
 {

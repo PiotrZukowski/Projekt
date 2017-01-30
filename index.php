@@ -4,9 +4,10 @@
 <title>STRONA z elementami HTML5</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" href="styl.css" />
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 <script src ="plik.js"></script>
 </head>
-<body onload="wczytajZdjecie();">
+<body onload="$(document).ready(function(){wczytajZdjecie()});">
 <section id="kontener">
 <header id="naglowek"><div id="head1"><h5>Projekt</h5>
 Przydatne walidatory: <a href="http://html5.validator.nu">http://html5.validator.nu</a>&nbsp;&nbsp;&nbsp;&nbsp;

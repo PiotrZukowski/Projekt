@@ -15,7 +15,7 @@ echo <<<KONIEC
 	<option>Grupa_2</option>
 </select>
 <input type="text" name="numerek" value="" placeholder="Szczesliwy numerek" /><br />
-<input type="radio" name="typLosowania" value="rand"/>random
+<input type="radio" name="typLosowania" checked="checked" value="random"/>random
 <input type="radio" name="typLosowania" value="mt_rand"/>mt_rand <br />
 <input type="hidden" name="los" value="tak" />
 <input type="submit" value="Losuj"/>
@@ -39,21 +39,33 @@ echo <<<KONIEC
 	<option>Grupa_2</option>
 </select>
 <input type="text" name="numerek" value="" placeholder="Szczesliwy numerek" /><br />
-<input type="radio" name="typLosowania" value="rand"/>random
+<input type="radio" name="typLosowania" checked="checked" value="random"/>random
 <input type="radio" name="typLosowania" value="mt_rand"/>mt_rand <br />
 <input type="hidden" name="los" value="tak" />
 <input type="submit" value="Losuj"/>
 </form>
 KONIEC;
+
 $numerek = $_REQUEST["numerek"];
 $typLosowania = $_REQUEST["typLosowania"];
-$uczen = losujUcznia();
+$klasa = $_REQUEST["klasa"];
+$grupa = $_REQUEST["grupa"];
+//echo ($numerek); echo ($typLosowania); echo ($klasa); echo ($grupa);
+$uczen = losujUcznia($klasa,$grupa,$numerek,$typLosowania);
 echo($uczen);
 }
 else {echo "Ta strona jest unwajlable";}	
-function losujUcznia() 
+function losujUcznia($class,$group,$number,$type) 
 {
-	return 20;
+	if($class == "3Ti"  && $group == "Grupa_1")
+	{
+		$x = rand(1,15);
+	}
+	if($class == "3Ti"  && $group == "Grupa_2")
+	{
+		$x = rand(16,29);
+	}
+	return $x;
 	
 }
 ?>

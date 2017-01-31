@@ -1,5 +1,6 @@
 <?php
 $los = "tak";
+if(isset($_REQUEST["los"]))$los = $_REQUEST["los"];
 if ($los == "nie"){
 echo "Wylosuj ucznia do odpowiedzi: nie  <br />";
 echo <<<KONIEC
@@ -20,8 +21,9 @@ echo <<<KONIEC
 <input type="submit" value="Losuj"/>
 </form>
 KONIEC;
+
 }
-else
+else if($los=="tak")
 	
 {
 echo "Wylosuj ucznia do odpowiedzi: tak <br />";
@@ -43,6 +45,13 @@ echo <<<KONIEC
 <input type="submit" value="Losuj"/>
 </form>
 KONIEC;
+$uczen = losujUcznia();
+echo($uczen);
 }
+else {echo "Ta strona jest unwajlable";}	
+function losujUcznia() 
+{
+	return 20;
 	
+}
 ?>

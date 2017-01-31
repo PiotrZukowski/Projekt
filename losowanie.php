@@ -1,5 +1,7 @@
 <?php
-echo "Wylosuj ucznia do odpowiedzi: <br />";
+$los = "tak";
+if ($los == "nie"){
+echo "Wylosuj ucznia do odpowiedzi: nie  <br />";
 echo <<<KONIEC
 <form action="index.php?strona=losowanie" method="POST" >
 <select name="klasa" >
@@ -14,7 +16,33 @@ echo <<<KONIEC
 <input type="text" name="numerek" value="" placeholder="Szczesliwy numerek" /><br />
 <input type="radio" name="typLosowania" value="rand"/>random
 <input type="radio" name="typLosowania" value="mt_rand"/>mt_rand <br />
+<input type="hidden" name="los" value="tak" />
 <input type="submit" value="Losuj"/>
 </form>
 KONIEC;
+}
+else
+	
+{
+echo "Wylosuj ucznia do odpowiedzi: tak <br />";
+echo <<<KONIEC
+<form action="index.php?strona=losowanie" method="POST" >
+<select name="klasa" >
+	<option>2Ti</option>
+	<option>3Ti</option>
+</select>
+
+<select name="grupa" >
+	<option>Grupa_1</option>
+	<option>Grupa_2</option>
+</select>
+<input type="text" name="numerek" value="" placeholder="Szczesliwy numerek" /><br />
+<input type="radio" name="typLosowania" value="rand"/>random
+<input type="radio" name="typLosowania" value="mt_rand"/>mt_rand <br />
+<input type="hidden" name="los" value="tak" />
+<input type="submit" value="Losuj"/>
+</form>
+KONIEC;
+}
+	
 ?>

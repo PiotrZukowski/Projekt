@@ -57,15 +57,31 @@ echo($uczen);
 else {echo "Ta strona jest unwajlable";}	
 function losujUcznia($class,$group,$number,$type) 
 {
-	if($class == "2Ti"  && $group == "Grupa_1")
+	if($class == "3Ti"  && $group == "Grupa_1")
 	{	do{
 		$x = rand(1,15);
 		}while($x==$number);
 		
 	}
+	if($class == "3Ti"  && $group == "Grupa_2")
+	{
+		do{
+		$x = rand(16,29);
+		}while($x==$number);
+	}
+	if($class == "2Ti"  && $group == "Grupa_1")
+	{
+		$g1_2ti = Array(3,4,6,7,11,15,16,18,19,20,22,24,25,28,29,32,33); 
+		do
+		{
+			$i = rand(0, count($g1_2ti )- 1);
+			$x = $g1_2ti[$i];
+		}while($x==$number);
+		
+	}
 	if($class == "2Ti"  && $group == "Grupa_2")
 	{
-		$x = rand(16,29);
+		$g2_2ti = Array(0,1,5,8,9,10,12,13,14,17,21,23,26,27,30,34,35);
 	}
 	return $x;
 	

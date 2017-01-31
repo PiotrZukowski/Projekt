@@ -45,6 +45,8 @@ echo <<<KONIEC
 <input type="submit" value="Losuj"/>
 </form>
 KONIEC;
+$numerek = $_REQUEST["numerek"];
+$typLosowania = $_REQUEST["typLosowania"];
 $uczen = losujUcznia();
 echo($uczen);
 }

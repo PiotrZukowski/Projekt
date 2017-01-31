@@ -57,11 +57,13 @@ echo($uczen);
 else {echo "Ta strona jest unwajlable";}	
 function losujUcznia($class,$group,$number,$type) 
 {
-	if($class == "3Ti"  && $group == "Grupa_1")
-	{
+	if($class == "2Ti"  && $group == "Grupa_1")
+	{	do{
 		$x = rand(1,15);
+		}while($x==$number);
+		
 	}
-	if($class == "3Ti"  && $group == "Grupa_2")
+	if($class == "2Ti"  && $group == "Grupa_2")
 	{
 		$x = rand(16,29);
 	}

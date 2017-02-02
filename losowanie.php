@@ -58,15 +58,22 @@ else {echo "Ta strona jest unwajlable";}
 function losujUcznia($class,$group,$number,$type) 
 {
 	if($class == "3Ti"  && $group == "Grupa_1")
-	{	do{
-		$x = rand(1,15);
+	{	
+		$g1_3ti = Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+		do
+		{
+			$i = rand(0, count($g1_3ti )- 1);
+			$x = $g1_3ti[$i];
 		}while($x==$number);
 		
 	}
 	if($class == "3Ti"  && $group == "Grupa_2")
-	{
-		do{
-		$x = rand(16,29);
+	{	
+		$g2_3ti = Array(16,17,18,19,20,21,22,23,24,25,26,27,28,29);
+		do
+		{
+			$i = rand(0, count($g2_3ti )- 1);
+			$x = $g2_3ti[$i];
 		}while($x==$number);
 	}
 	if($class == "2Ti"  && $group == "Grupa_1")
@@ -82,6 +89,11 @@ function losujUcznia($class,$group,$number,$type)
 	if($class == "2Ti"  && $group == "Grupa_2")
 	{
 		$g2_2ti = Array(0,1,5,8,9,10,12,13,14,17,21,23,26,27,30,34,35);
+		do
+		{
+			$i = rand(0, count($g2_2ti )- 1);
+			$x = $g2_2ti[$i];
+		}while($x==$number);
 	}
 	return $x;
 	

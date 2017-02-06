@@ -17,8 +17,8 @@ if ($connection)
 {
 	$wynik = $connection -> query($zapytanie);
 	mysqli_close($connection);
-	if($wynik)echo "Tabela: <b>".$tabela."</b> zostala poprawnie dodana do bazy <b>".$baza."</b>< br />";
-	else echo "Tabela: <b>".$tabela."</b> nie zostala poprawnie dodana do bazy <b>".$baza."</b>< br />";
+	if($wynik)echo "Tabela: <b>".$tabela."</b> zostala poprawnie dodana do bazy <b>".$baza."</b>";
+	else echo "Tabela: <b>".$tabela."</b> nie zostala poprawnie dodana do bazy <b>".$baza."</b>";
 	
 }
 else echo "brak połączenia bazom < br />";

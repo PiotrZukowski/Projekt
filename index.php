@@ -21,7 +21,9 @@ Przydatne walidatory: <a href="http://html5.validator.nu">http://html5.validator
 <a href="index.php?strona=start">Strona główna</a><br /><br />
 <a href="index.php?strona=gra">Gry</a> <br /><br />
 <a href="index.php?strona=losowanie">Losuj cwela</a> <br /><br />
-<a href="index.php?strona=sqlphp">pierdyknij zapytanko</a>
+<a href="index.php?strona=sqlphp">pierdyknij zapytanko</a> <br /><br />
+<a href="index.php?strona=logowanie">logowanie</a>
+
 </nav>
 <section id="main">
 <?php

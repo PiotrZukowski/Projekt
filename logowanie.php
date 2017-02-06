@@ -1,5 +1,5 @@
 <?php session_start();
-if(isset($_SESSION["zalogowany"}))$zalogowany = $_SESSION["zalogowany"];
+if(isset($_SESSION["zalogowany"]))$zalogowany = $_SESSION["zalogowany"];
 else $zalogowany = "no";
 //jeżeli zalogowany
 if ($zalogowany == "yes")
@@ -36,34 +36,31 @@ else
 
 
 //----------------------------------------------------------------//
-function dzialaj();
+function dzialaj()
 {
-	echo "Zostałeś poprawnie zalogowany"
+	echo "Zostałeś poprawnie zalogowany";
 }
-function infoError($string);
+function infoError($string)
 {
 	echo($string);
 }
 function formularzLogowania()
 {
 	echo <<<END
+	<br />
 	<form action="index.php" method="POST">
 	Login: &nbsp; <input type="text" name="login"  value=""/> <br /> <br />
-	Hasło: &nbsp; <input type="password"
+	Hasło: &nbsp; <input type="password" name="password"  value="" /> <br /><br />
+	<input type="submit" value="Zaloguj" />
 	</form>
+	
+END;
 }
 
 
 
 
 ?>
-
-
-
-
-
-
-
 
 
 

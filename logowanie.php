@@ -8,8 +8,8 @@ if ($test == "tak")$zalogowany = zapytajBaze();
 
 if ($zalogowany == "yes")
 {
-	dzialaj();
-}	
+	dzialaj();?
+	}	
 
 //nie zalogowany
 else if($zalogowany == "no")
@@ -66,12 +66,21 @@ function zapytajBaze()
 	$login = $_REQUEST["login"];
 	$haslo= $_REQUEST["password"];
 	$host = "localhost"; $user = "root"; $password = ""; $baza = "korporacja";
+	$zapytanie = 
 	$connection = mysqli_connect($host,$user,$password,$baza);
 	if ($connection)
 	{
-		
+		$wynik = $connection -> query($zapytanie);
+		if ($wynik)
+		{
+			$ile = mysqli_num_rows($wynik);
+			if($ile >= 0)
+			{
+				
+			}
+		}
 	}
-	$log = "yes";
+	$log = "error";
 	return $log;
 }
 

@@ -8,7 +8,7 @@ if ($test == "tak")$zalogowany = zapytajBaze();
 
 if ($zalogowany == "yes")
 {
-	dzialaj();?
+	dzialaj();
 	}	
 
 //nie zalogowany
@@ -23,7 +23,7 @@ else if($zalogowany == "no")
 else if($zalogowany == "error")
 {
 	infoError("Nieprawidłowy login lub hasło");
-	formularzLogowania;
+	formularzLogowania();
 }
 
 
@@ -66,7 +66,7 @@ function zapytajBaze()
 	$login = $_REQUEST["login"];
 	$haslo= $_REQUEST["password"];
 	$host = "localhost"; $user = "root"; $password = ""; $baza = "korporacja";
-	$zapytanie = 
+	$zapytanie = "SELECT name, password FROM users";
 	$connection = mysqli_connect($host,$user,$password,$baza);
 	if ($connection)
 	{
@@ -74,13 +74,22 @@ function zapytajBaze()
 		if ($wynik)
 		{
 			$ile = mysqli_num_rows($wynik);
-			if($ile >= 0)
+			if($ile >= 1)
 			{
-				
+				$log ="error";
+				for($i=1;$i<=$ile;$i++)
+				{
+					$wiersz = mysqli_fetch_assoc($wynik);
+					
+					$name = $wiersz['name'];
+					$passwd = $wiersz["password"];
+					if($login == $name && $haslo == $passwd) $log = "yes";
+					
+				}
 			}
 		}
 	}
-	$log = "error";
+	
 	return $log;
 }
 

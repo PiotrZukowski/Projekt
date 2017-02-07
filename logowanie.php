@@ -1,14 +1,14 @@
 <?php session_start();
 if(isset($_SESSION["zalogowany"]))$zalogowany = $_SESSION["zalogowany"];
 else $zalogowany = "no";
-if (isset($_REQUEST["test"]))$test = $REQUEST["test"];
+if (isset($_REQUEST["test"]))$test = $_REQUEST["test"];
 else $test = "nie";
 if ($test == "tak")$zalogowany = zapytajBaze();
 //jeżeli zalogowany
 
 if ($zalogowany == "yes")
 {
-	
+	dzialaj();
 }	
 
 //nie zalogowany
@@ -64,13 +64,15 @@ END;
 function zapytajBaze()
 {
 	$login = $_REQUEST["login"];
-	$haslo= $_REQUEST["haslo"];
+	$haslo= $_REQUEST["password"];
 	$host = "localhost"; $user = "root"; $password = ""; $baza = "korporacja";
 	$connection = mysqli_connect($host,$user,$password,$baza);
-	if ($conenction)
+	if ($connection)
 	{
 		
 	}
+	$log = "yes";
+	return $log;
 }
 
 
